@@ -1,0 +1,25 @@
+led.enable(false)
+let strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB)
+pins.analogSetPitchPin(AnalogPin.P0)
+strip.showColor(neopixel.colors(NeoPixelColors.Red))
+strip.showRainbow(1, 360)
+while (true) {
+    for (let index = 0; index < 2; index++) {
+        music.playMelody("- E D F A B C5 B ", 120)
+        strip.showRainbow(1, 360)
+        music.playMelody("F D E D F A C5 B ", 120)
+        strip.showRainbow(1, 360)
+    }
+    music.playMelody("- G D F A B C5 G ", 120)
+    strip.showRainbow(1, 360)
+    music.playMelody("F D C D F A C5 G ", 120)
+    strip.showRainbow(1, 360)
+    music.playMelody("- E D F A B C5 B ", 120)
+    strip.showRainbow(1, 360)
+    music.playMelody("A F D E F A C5 B ", 120)
+    strip.showRainbow(1, 360)
+    music.playMelody("A F D E F A C5 B ", 120)
+    strip.showRainbow(1, 360)
+    music.playMelody("D F E F G C5 B G ", 120)
+    strip.showRainbow(1, 360)
+}
